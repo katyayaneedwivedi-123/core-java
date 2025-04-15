@@ -1,0 +1,89 @@
+
+app1	:	Helloword programs
+app2	:	Literals
+app3	:	println/print
+app4	:	variables
+app5	:	concatination
+app6	:	basic operators
+app7	:	unary operators
+app8	:	command line arguments
+app9	:	binary conversion
+app10	:	logical and unary operations
+app11	:	if-blocks
+app12	:	nested if-blocks
+app13	:	else blocks 
+app14	:	if else blocks inside an if blocks
+app15	:	if blocks inside an else blocks
+app16	:	ternary operator
+app17	:	switch-cases basics
+app18	:	switch-cases advance
+app19	:	for-loops basics
+app20	:	for-loop flow
+app21	:	nested and labeled loops
+app22	:	while-loop
+app23	:	do-while-loop
+app24	:	for-each-loop
+app25	:	methods
+app26	:	method parameters/arguments
+revisit to app20	:	for-loop flow
+app27	:	static attributes/field/properties
+app28	:	static initializers(static initialization blocks)
+app29	:	IFR(illegal forword refrence)
+app30	:	one class members using in another class
+app31	:	basics of arrays;
+app32	:	basics of strings
+app33	:	non static (objects and references)
+app34	:	constructors and this as a reference variable
+app35	:	constructor overloading and this() as a calling statement 
+app36	:	instance initialization blocks(IIB)
+app37	:	instances count
+app38	:	inheritance
+app39	:	packages
+app40	:	access levels or specifiers
+app41	:	default or package, protected and public access specifiers
+app42	:	abstract classes
+app43	:	interfaces
+app44	:	method overloading and overriding
+app45	:	primitive casting
+app46	:	derived casting
+app47	:	polymorphism
+app48	:	final
+app49	:	java documentation (javap, javadoc commands)
+app50	:	classpath and jar command
+app51	:	scanner class
+app52	:	wrapper classes
+app53	:	auto boxing and var-args
+app54	:	Exception Handling
+app55	:	inner classes 
+app56	:	lambda expressions
+app57	:	why do we required inner classes
+app58	:	Generics
+app59	:	object class(toString, hashcode and equals methods)
+app60	:	garbage collection
+app61	:	cloning
+app62	:	reflection API
+app63	:	Multi Threading (Thread class)
+app64	:	Multi Threading (Runnable interface)
+app65	:	thread Default properties
+app66	:	synchronization
+app67	:	Collection API - List
+app68	:	Collection API - Queue and Stack
+app69	:	Collection API - Set
+app70	:	Collection API - Map
+app71	:	Collection API - Storing User defined Derived Type (imp of toString)
+app72	:	Collection API - Storing User defined Derived Type (imp of hashCode() and equals())
+app73	:	Collection API - Storing User defined Derived Type (focusing on sorting)
+app74	:	Collection API - Custome development
+app75	:	Collection API - Concurrancy package
+app76	:	String 
+app77	:	StringBuffer and StringBuilder
+app78	:	String Formatters
+app79	:	Regular Expressions
+app80	:	SimpleDateFormat and developing our own immutable class
+app81	:	File handling basics
+app82	:	text content writting/reading
+app83	:	binay content writting/reading
+app84	:	serialization/deserialization
+app85	:	JDK 1.8 features
+app86	:	enums
+app87	:	annotations

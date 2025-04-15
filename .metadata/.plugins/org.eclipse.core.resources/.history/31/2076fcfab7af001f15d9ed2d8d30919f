@@ -1,0 +1,23 @@
+package app82;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+
+public class M10 {
+	public static void main(String[] args) {
+		try(FileWriter out = new FileWriter("test10.txt", true);
+			BufferedWriter bout = new BufferedWriter(out)){
+			bout.write("hello to everone");
+			bout.newLine();
+			bout.write("hello to everone");
+			bout.write("hello to everone");
+			bout.write("hello to everone");
+			bout.newLine();
+			bout.write("hello to everone");
+			bout.write("hello to everone");
+			bout.newLine();
+			bout.write("hello to everone");
+		}
+	}
+}
+//bufferwriter is on the top of file writer

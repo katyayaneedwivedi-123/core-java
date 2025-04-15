@@ -1,0 +1,32 @@
+package app84;
+
+import java.io.PrintStream;
+
+public class M15 {
+	public static void main(String[] args) throws Exception{
+		PrintStream p1 = new PrintStream("hello1.txt");
+		p1.println(1); // f
+		System.out.println(2); //c
+		PrintStream p2 = System.out;
+		p2.println(3); //c
+		p1.println(4); //f
+		System.out.println(5); //c
+		System.setOut(p1);
+		p1.println(6);//f
+		System.out.println(7);//f b/c we modify the file System
+		p2.println(8);//c
+		p1.println(9);//f
+		System.out.println(10);//f
+		
+		System.setOut(p2);
+		p1.println(11);//f
+		System.out.println(12);//c b/c current system is changing
+		p2.println(13);//c
+		p1.println(14);//f
+		System.out.println(10);//c
+	}
+}
+//p1 is original file system
+//p2 is original console
+//whenever p1 is refering it is a file system
+//whenever println is refering in a console

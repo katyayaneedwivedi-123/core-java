@@ -1,0 +1,10 @@
+package pack2;
+
+public class K23 {
+	public static void main(String[] args) throws NullPointerException{
+		Integer obj = null;
+		int i = obj;
+		System.out.println(obj);
+		System.out.println(i);
+	}
+}

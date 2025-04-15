@@ -1,0 +1,10 @@
+package app87;
+
+public class M1 {
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString();
+	}
+}
+//@override is also a one of the built-in method

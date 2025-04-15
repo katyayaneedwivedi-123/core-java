@@ -1,0 +1,8 @@
+package app84;
+
+public class M14 {
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World!");
+	}
+}

@@ -1,0 +1,44 @@
+package pack2;
+
+class Student{
+	int Studentid;
+	String Studentname;
+	double Studentgrade;
+	Student(int Studentid, String Studentname, double Studentgrade){
+		this.Studentid = Studentid;
+		this.Studentname = Studentname;
+		this.Studentgrade = Studentgrade;
+	}
+	@Override
+	public String toString() {
+		return "(" + "Name = " + Studentname + " I'd = " + Studentid + " grade = " + Studentgrade + ")";
+	}
+	@Override
+	public boolean equals(Object obj) {
+		return (!(obj instanceof Student)&&
+				(Studentid == ((Student)obj).Studentid)&&
+				(Studentname == ((Student)obj).Studentname)&&
+				(Studentgrade == ((Student)obj).Studentgrade));
+	}
+	@Override
+	public int hashCode() {
+		String s1 = Studentname;
+		String s2 = Integer.toString(Studentid);
+		String s3 = Double.toString(Studentgrade);
+		int hash = s2.hashCode();
+		hash += s3.hashCode();
+		return hash;
+	}
+}
+public class K24 {
+	public static void main(String[] args) {
+		Student s1 = new Student(23, "kajal", 78.9);
+		System.out.println(s1.toString());
+		System.out.println(s1.equals(s1));
+		System.out.println(s1.hashCode());
+		Student s2 = new Student(56, "ustdy", 89.74);
+		System.out.println(s2.toString());
+		System.out.println(s2.equals(s2));
+		System.out.println(s2.hashCode());
+	}
+}

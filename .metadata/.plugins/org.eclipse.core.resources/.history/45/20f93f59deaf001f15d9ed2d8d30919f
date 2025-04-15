@@ -1,0 +1,23 @@
+package app82;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class M1 {
+	public static void main(String[] args) throws IOException{
+		File f1 = new File("test.txt");
+		FileWriter out = new FileWriter(f1);
+		out.write("Hello to everyone");
+		out.write("Hello to everyone");
+		out.write("Hello to everyone");
+		out.write("Hello to everyone");
+		out.write("Hello to everyone");
+		out.write("Hello to everyone");
+		out.flush();
+		out.close();//all these statement required a IOException 
+		System.out.println("done");
+	}
+}
+//while writing a content in file if file is not available it creates automatically file
+//by default append satus is a false it is not appending the previous content to the current content 

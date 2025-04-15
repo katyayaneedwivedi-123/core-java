@@ -1,0 +1,22 @@
+package app82;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class M2 {
+	public static void main(String[] args) throws IOException{
+		FileWriter out = new FileWriter("test2.txt");
+		out.write("Hello to everyone");
+		out.write("Hello to everyone");
+		out.write("Hello to everyone");
+		out.write("Hello to everyone");
+		out.write("Hello to everyone");
+		out.write("Hello to everyone");
+		out.flush();
+		out.close();
+		System.out.println("done");
+	}
+}
+//Directly we can specify the file name to the constructor
+//there are several constructor we can supply filename and also string itself as a file name

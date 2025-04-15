@@ -1,0 +1,16 @@
+package pack1;
+interface B{
+	void test1();
+}
+class C {
+	static void m1() {
+		System.out.println("i am from m1");
+	}
+}
+public class M2 {
+	public static void main(String[] args) {
+		B b1 = C :: m1;
+	}
+}
+//i want to create an object in B but b is interface it have a test method
+//so we can assing m1 :: to  C

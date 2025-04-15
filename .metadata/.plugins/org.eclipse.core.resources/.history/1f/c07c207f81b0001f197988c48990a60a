@@ -1,0 +1,29 @@
+package app82;
+
+import java.io.BufferedReader;
+import java.io.CharArrayReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class M21 {
+	public static void main(String[] args) {
+		try(FileReader file = new FileReader("test.txt")){
+			BufferedReader in = new BufferedReader(file);
+			String s1;
+			while((s1 = in.readLine()) != null) {
+				System.out.println(s1);
+				char[] charArray = s1.toCharArray();
+				int count = 0;
+				for(char c : charArray){
+					if( s1 == " ") {
+						count++;
+					}
+				}
+				System.out.println(count);
+			}
+		}
+		catch(IOException ex) {
+			ex.printStackTrace();
+		}
+	}
+}

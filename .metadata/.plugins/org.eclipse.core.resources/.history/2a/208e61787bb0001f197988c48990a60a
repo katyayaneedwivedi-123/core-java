@@ -1,0 +1,28 @@
+package app83;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class M1a {
+	public static void main(String[] args) {
+		File src = new File("D:\\Camera\\IMG_20190903_111151.jpg");
+		File target = new File("xyz.jpg");
+		
+		try(FileInputStream fin = new FileInputStream(src);
+				BufferedInputStream bin = new BufferedInputStream(fin);
+				FileOutputStream fout = new FileOutputStream(target);
+				BufferedOutputStream bout = new BufferedOutputStream(fout)){
+				int size = (int) src.length();
+				byte[] bytes = new byte[size];
+				bin.read(bytes);
+				System.out.println("hello");
+		}
+		catch(IOException ex) {
+			ex.printStackTrace();
+		}
+	}
+}

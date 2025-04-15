@@ -1,0 +1,22 @@
+package app82;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+public class M22 {
+	public static void main(String[] args) {
+		try(FileReader file = new FileReader("test1.txt")){
+			BufferedReader in = new BufferedReader(file);
+			String s1;
+			while((s1 == in.readLine()) != null) {
+				System.out.println(s1);
+				char[] charArray = s1.toCharArray();
+				
+				int uppercount = 0;
+				for(char c : charArray) {
+					if()
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+package app82;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class M23 {
+	public static void main(String[] args) {
+		try(FileReader file = new FileReader("test.txt")){
+			BufferedReader in = new BufferedReader(file);
+			String s1;
+			while((s1 = in.readLine()) != null) {
+				System.out.println(s1);
+				char[] charArray = s1.toCharArray();
+				char lowercase = charArray[1];
+				int count = 0;
+				for(char c : charArray) {
+					if(Character.isLowerCase(c)) {
+						count++;
+					}
+				}
+				System.out.println("lowercase = " + lowercase);
+				System.out.println("count = " + count);
+			}
+		}
+		catch(IOException ex) {
+			ex.printStackTrace();
+		}
+	}
+}

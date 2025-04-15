@@ -1,0 +1,26 @@
+package app85;
+interface D{
+	default void test1() {
+		System.out.println("A-test1");
+	}//it is concrete method
+	void test2();//it abstract method
+}
+class E implements D{
+	public void test2() {
+		System.out.println("E-test2");
+	}
+}
+public class M4 {
+	public static void main(String[] args) {
+		E e1 = new E();
+		e1.test1();
+		e1.test2();
+	}
+}
+//default method means test1 is not use without interface
+//default non static method is not for the non static inteface only it also for the subclasses of interface
+//test1 is defined method so we can not direct define 
+//test2 is a abstract method it is optional for the test2
+//so b/c of this difference we use the default
+//use default in test1
+//instead of keeping a condition put in test2 they put a condition in test1 as default

@@ -1,0 +1,31 @@
+package app55;
+
+public class M7 {
+	public static void main(String[] args) {
+		int i = 10;
+		final int j = 20;
+		
+		class A{
+			void test() {
+//				System.out.println(i);//i is act as final so we are not used inside the method
+				System.out.println(j);
+			}
+		}
+		
+		A a1 = new A();
+		a1.test();
+		i = 40;
+		a1.test();
+		
+	}
+}
+//test method is a part of class M7
+//test method uses a i and j 
+//if we attempting to i then we give compilation error
+//and we attempting to j it is final it not change
+//eventhough i is not declare as final but it not modify any where it acting as final
+//this type of variable is used in local inner class
+//compiler asking you want to modify the i anywhere then i can not be used local in inner class
+//if i is not modify then we used in outside of the local inner class 
+//if we comment the line number10 then it compile successfully 
+//otherwise it give compilation error

@@ -1,0 +1,51 @@
+package app73;
+
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+class J {
+	int i, j, k;
+	J(int i, int j, int k){
+		this.i = i;
+		this.j = j;
+		this.k = k;
+	}
+	@Override
+	public String toString() {
+		return "(" + i + ", " + j + ", " + k + ")";
+	}
+}
+class A1 implements Comparator<J>{
+	@Override
+	public int compare(J o1, J o2) {
+		return o1.i -o2.i;
+	}
+}
+class B1 implements Comparator<J>{
+	@Override
+	public int compare(J o1, J o2) {
+		return o1.j -o2.j;
+	}
+}
+class C1 implements Comparator<J>{
+	@Override
+	public int compare(J o1, J o2) {
+		return o1. k-o2.k;
+	}
+}
+public class M10 {
+	public static void main(String[] args) {
+		Map<J, String> map = new HashMap<J, String>();
+		map.put(new J(90, 20, 45), "abc");
+		map.put(new J(20, 90, 45), "xyz");
+		map.put(new J(90, 45, 20), "pqr");
+		map.put(new J(45, 20, 90), "test");
+		map.put(new J(70, 24, 98), "done");
+		System.out.println(map);
+	//	map.sort(new A1());
+		System.out.println(map);
+	}
+}

@@ -1,0 +1,44 @@
+package app84;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+class F implements Serializable{
+	int i;
+	F(){
+		System.out.println("F()");
+	}
+}
+class G extends F{
+	int j;
+	G(){
+		System.out.println("G()");
+	}
+}
+class H extends G{
+	int k;
+	H(){
+		System.out.println("H()");
+	}
+}
+public class M9 {
+	public static void main(String[] args) throws Exception{
+		FileOutputStream fout = new FileOutputStream("test5.ser");
+		ObjectOutputStream out = new ObjectOutputStream(fout);
+		H obj1 = new H();
+		obj1.i = 10;
+		obj1.j = 20;
+		obj1.j = 30;
+		out.writeObject(obj1);
+		System.out.println("------------------");
+		FileInputStream fin = new FileInputStream("test5.ser");
+		ObjectInputStream in = new ObjectInputStream(fin);
+		H obj2 = (H) in.readObject();
+		System.out.println(obj2.i);
+		System.out.println(obj2.j);
+		System.out.println(obj2.k);
+	}
+}

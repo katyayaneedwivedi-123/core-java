@@ -1,0 +1,20 @@
+package app85;
+class I{
+	void test() {
+		System.out.println("I-test");
+	}
+}
+class J{
+	void test() {
+		System.out.println("J-test");
+	}
+}
+//class K extends I, J {
+//	
+//}
+public class M6 {
+
+}
+//two method for the same class one is i and one is j which test method has to override it give ambiguity
+//to avoid this ambiguity java not support multiple inheritance here
+//same method name is not allow

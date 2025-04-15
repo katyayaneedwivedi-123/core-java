@@ -1,0 +1,18 @@
+package app82;
+
+import java.io.FileReader;
+import java.io.IOException;
+
+public class M12 {
+	public static void main(String[] args) {
+		try(FileReader fin = new FileReader("test.txt")) {
+			char[] chars = new char[10];
+			fin.read(chars);
+			String s1 = new String(chars);
+			System.out.println(s1);
+		} 
+		catch (IOException ex) {
+			ex.printStackTrace();
+		}
+	}
+}

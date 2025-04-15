@@ -1,0 +1,15 @@
+package app81;
+
+import java.io.File;
+import java.io.IOException;
+
+public class M12 {
+	public static void main(String[] args) throws IOException{
+		File f1 = new File("E:\\AI\\test.text");
+		System.out.println(f1.exists());//false
+		System.out.println(f1.createNewFile());
+		System.out.println(f1.exists());
+	}
+}
+//in create new file if given path is not available it give the exception
+//IOException
