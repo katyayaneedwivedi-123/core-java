@@ -1,0 +1,27 @@
+package app82;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class M17 {
+	public static void main(String[] args) {
+		try(FileReader fin = new FileReader("test.txt")) {
+			BufferedReader in = new BufferedReader(fin);
+			String s1;
+			while((s1 = in.readLine()) != null) {
+				System.out.println(s1);
+				String[] words = s1.split("\\s+");
+				int count = words.length;
+				if(words == words) {
+					count++;
+					System.out.println(words);
+				}
+				System.out.println(count);
+			}
+		} 
+		catch (IOException ex) {
+			ex.printStackTrace();
+		}
+	}
+}

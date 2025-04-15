@@ -1,0 +1,49 @@
+package app84;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+class F{
+	int i;
+	F(){
+		System.out.println("F()");
+	}
+}
+class G extends F{
+	int j;
+	G(){
+		System.out.println("G()");
+	}
+}
+class H extends G implements Serializable{
+	int k;
+	H(){
+		System.out.println("H()");
+	}
+}
+public class M9 {
+	public static void main(String[] args) throws Exception{
+		FileOutputStream fout = new FileOutputStream("test5.ser");
+		ObjectOutputStream out = new ObjectOutputStream(fout);
+		H obj1 = new H();
+		obj1.i = 10;
+		obj1.j = 20;
+		obj1.k = 30;
+		out.writeObject(obj1);
+		System.out.println("------------------");
+		FileInputStream fin = new FileInputStream("test5.ser");
+		ObjectInputStream in = new ObjectInputStream(fin);
+		H obj2 = (H) in.readObject();
+		System.out.println(obj2.i);
+		System.out.println(obj2.j);
+		System.out.println(obj2.k);
+	}
+}
+//if superclass implementing the serializable then all are subclass also eligible for the serializable now while deserializing object creating to superclass to serializable type of the class
+//for G serializing F class create an object to deserializable but the serializable G H 
+//earliar g and subclass h only member goning to serializable but the f member is not serializable it deserializable
+//if H object is implement to serailizable then only H class member is eligible for the serailize not other 
+//G class create an deserialize object even though h is implementing the G and F class but g and F both are deserialize

@@ -1,0 +1,13 @@
+package pack1;
+interface A {
+	void test1();//it's a abstract test1 method
+}
+public class M1 {
+	static void f1() {
+		System.out.println("f1");
+	}
+	public static void main(String[] args) {
+		A a1 = M1 :: f1;
+		a1.test1();
+	}
+}

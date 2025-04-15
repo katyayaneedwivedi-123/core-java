@@ -1,0 +1,12 @@
+package app85;
+
+interface P{
+	void test1();
+}
+
+interface Q{
+	void test1();
+}
+public class M7 {
+
+}

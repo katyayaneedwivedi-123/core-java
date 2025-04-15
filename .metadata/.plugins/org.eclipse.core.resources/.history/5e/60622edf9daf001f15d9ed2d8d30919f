@@ -1,0 +1,12 @@
+package app81;
+
+import java.io.File;
+
+public class M1 {
+	public static void main(String[] args) {
+		File f1 = new File("/src/app81/M1.java");
+		System.out.println(f1.isFile());
+		System.out.println(f1.isDirectory());
+		System.out.println(f1.length());
+	}
+}

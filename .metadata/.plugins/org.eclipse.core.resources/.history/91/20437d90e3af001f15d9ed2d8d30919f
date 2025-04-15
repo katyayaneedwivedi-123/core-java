@@ -1,0 +1,22 @@
+package app82;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class M13 {
+	public static void main(String[] args) {
+		try(FileReader fin = new FileReader("test1.txt")) {
+			BufferedReader in = new BufferedReader(fin);
+			String s1 = in.readLine();//read a first line using the buffer reader
+			//if it available then s1 is not a null then go in the while
+			while(s1 != null) {
+				System.out.println(s1);
+				s1 = in.readLine();
+			}
+		} 
+		catch (IOException ex) {
+			ex.printStackTrace();
+		}
+	}
+}

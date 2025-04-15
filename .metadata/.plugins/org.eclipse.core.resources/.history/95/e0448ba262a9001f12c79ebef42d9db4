@@ -1,0 +1,48 @@
+package app73;
+
+import java.util.Comparator;
+import java.util.List;
+import java.util.Vector;
+
+class I {
+	int i, j, k;
+	I(int i, int j, int k){
+		this.i = i;
+		this.j = j;
+		this.k = k;
+	}
+}
+public class M9 {
+	public static void main(String[] args) {
+		List<I> list = new Vector<I>();
+		list.add(new I(10, 20, 30));
+		list.add(new I(20, 10, 30));
+		list.add(new I(10, 30, 20));
+		list.add(new I(30, 20, 10));
+		list.add(new I(30, 40, 50));
+		System.out.println(list);
+		list.sort(new Comparator<I>() {
+			@Override
+			public int compare(I o1, I o2) {
+				return o1.i - o2.i;
+			}
+		});
+		System.out.println(list);
+		
+		list.sort(new Comparator<I>() {
+			@Override
+			public int compare(I o1, I o2) {
+				return o1.j - o2.j;
+			}
+		});
+		System.out.println(list);
+		
+		list.sort(new Comparator<I>() {
+			@Override
+			public int compare(I o1, I o2) {
+				return o1.k - o2.k;
+			}
+		});
+		System.out.println(list);
+	}
+}

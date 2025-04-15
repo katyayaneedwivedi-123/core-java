@@ -1,0 +1,44 @@
+package app84;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+class P implements Serializable{
+	int i;
+	int j;
+	int k;
+	private void writeObject(ObjectOutputStream out) throws IOException{
+		System.out.println("I am in writeObject");
+		out.defaultWriteObject();
+		out.writeInt(300000);
+	}
+	private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException{
+		System.out.println("i am in readObject");
+		in.defaultReadObject();//the whole deserialization
+		System.out.println(in.readInt());
+	}
+}
+public class M10 {
+	public static void main(String[] args) throws Exception{
+		FileOutputStream fout = new FileOutputStream("test10.ser");
+		ObjectOutputStream out = new ObjectOutputStream(fout);
+		P p1 = new P();
+		p1.i = 10;
+		p1.j = 20;
+		p1.k = 30;
+		out.writeObject(p1);
+		System.out.println("-------------------");
+		FileInputStream fin = new FileInputStream("test10.ser");
+		ObjectInputStream in = new ObjectInputStream(fin);
+		P obj = (P) in.readObject();
+		System.out.println(obj.i);
+		System.out.println(obj.j);
+		System.out.println(obj.k);
+	}
+}
+//if methods are private we can not use the outside eventhough it is used for the framework
+//if class containing write object then framework calling write method if it is there then it is delegating to private read method  

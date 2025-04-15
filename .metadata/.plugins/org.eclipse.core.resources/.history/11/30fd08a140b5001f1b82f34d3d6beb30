@@ -1,0 +1,24 @@
+package app64;
+
+public class M11 {
+	static Thread getThread() {
+		Thread t1 = new Thread() {
+			@Override
+			public void run() {
+				for(int i = 1; i <= 1000; i++) {
+					System.out.println(i);
+				}
+			}
+		};
+		return t1;
+	}
+	
+	public static void main(String[] args) {
+		getThread().start();
+		for(int i = 4000; i<= 5000; i++) {
+			System.out.println(i);
+		}
+	}
+}
+//getThread is returning t1 and pointing to the thread
+//

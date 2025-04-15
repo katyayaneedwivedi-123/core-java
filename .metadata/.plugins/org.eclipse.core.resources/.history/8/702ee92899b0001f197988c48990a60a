@@ -1,0 +1,25 @@
+package app82;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Arrays;
+
+public class M19 {
+	public static void main(String[] args) {
+		try(FileReader fin = new FileReader("test6.txt")) {
+			BufferedReader in = new BufferedReader(fin);
+			String s1;
+			while((s1 = in.readLine()) != null) {
+				System.out.println(s1);
+				String[] line = s1.split("\\s+");
+				for(int i = 1; i > line.length - 1; i--) {
+					System.out.println(i);
+				}
+			}
+		} 
+		catch (IOException ex) {
+			ex.printStackTrace();
+		}
+	}
+}

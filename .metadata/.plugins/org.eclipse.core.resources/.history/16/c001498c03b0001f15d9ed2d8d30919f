@@ -1,0 +1,23 @@
+package app82;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class M9 {
+	public static void main(String[] args) {
+		try (FileWriter out = new FileWriter("test6.txt", true)){
+			out.write("Hello to everyone");
+			out.write("Hello to everyone");
+			out.write("Hello to everyone");
+			out.write("\n");
+			out.write("Hello to everyone");
+			out.write("Hello to everyone\n");
+			out.write("Hello to everyone");
+		}
+		catch(IOException ex) {
+			ex.printStackTrace();
+		}
+		System.out.println("done");
+	}
+}
+//it is a automatically perform operation

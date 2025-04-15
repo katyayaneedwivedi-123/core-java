@@ -1,0 +1,36 @@
+package app82;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Arrays;
+
+public class M17 {
+	public static void main(String[] args) {
+		try(FileReader fin = new FileReader("test.txt")) {
+			BufferedReader in = new BufferedReader(fin);
+			String s1;
+			int count = 1;
+			int maxcount = 1;
+			while((s1 = in.readLine()) != null) {
+				System.out.println(s1);
+				String[] words = s1.split("\\s+");
+				Arrays.sort(words);
+				String maxword = words[0];
+				for(int i = 1; i < words.length; i++) {
+					count = words[i].equals(words[i-1]) ? count + 1: 1;
+					if (count > maxcount) {
+						maxcount = count;
+						maxword = words[i];
+					}
+				}	
+				System.out.println("mxa word:" + maxword );
+				System.out.println(" word occurred = " + maxcount + "times");
+			}
+			System.out.println(count);
+			} 
+		catch (IOException ex) {
+			ex.printStackTrace();
+		}
+	}
+}

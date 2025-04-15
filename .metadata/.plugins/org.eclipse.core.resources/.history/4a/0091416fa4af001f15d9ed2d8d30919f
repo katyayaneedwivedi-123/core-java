@@ -1,0 +1,15 @@
+package app81;
+
+import java.io.File;
+
+public class M9 {
+	public static void main(String[] args) {
+		File f1 = new File("abc");
+		System.out.println(f1.exists());
+		System.out.println(f1.mkdir());
+		System.out.println(f1.exists());
+	}
+}
+//not only referring a file we should create a file 
+//for creating a file we can go for mkdir() it method for both file and directory
+//mkdir() method is not a checked exception type of a statement

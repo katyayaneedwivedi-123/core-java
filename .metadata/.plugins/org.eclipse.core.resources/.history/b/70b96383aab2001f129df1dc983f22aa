@@ -1,0 +1,15 @@
+package app84;
+
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
+public class M12 {
+	public static void main(String[] args) throws Exception{
+		FileOutputStream fout = new FileOutputStream("test25.ser");
+		ObjectOutputStream out = new ObjectOutputStream(fout);
+		R r1 = new R();
+		r1.i = 10;
+		out.writeObject(r1);
+		System.out.println("done");
+	}
+}

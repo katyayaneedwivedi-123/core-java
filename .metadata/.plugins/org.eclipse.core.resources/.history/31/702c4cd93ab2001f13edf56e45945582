@@ -1,0 +1,8 @@
+package pack2;
+
+public class K23 {
+	public static void main(String[] args) {
+		Integer obj = null;
+		int i = obj;
+	}
+}

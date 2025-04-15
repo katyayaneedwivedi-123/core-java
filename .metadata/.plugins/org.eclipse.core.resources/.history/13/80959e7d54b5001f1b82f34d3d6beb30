@@ -1,0 +1,16 @@
+package app86;
+
+public class M1 {
+	enum Day{
+		MON, TUE, WED, THR, FRI, SAT, SUN;
+	}
+	public static void main(String[] agrs) {
+		System.out.println(Day.THR);
+		System.out.println(Day.MON);
+		System.out.println(Day.THR);
+		System.out.println(Day.FRI);
+		System.out.println(Day.SAT);
+		System.out.println(Day.SUN);
+		System.out.println(Day.WED);
+	}
+}

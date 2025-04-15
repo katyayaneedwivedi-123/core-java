@@ -1,0 +1,25 @@
+package pack1;
+class G{
+	G(){
+		System.out.println("G()");
+	}
+	
+	G(int i){
+		System.out.println("G(int):" + i);
+	}
+	
+	G(int i, int j){
+		System.out.println("G(int):" + i);
+	}
+	
+	void test() {
+		System.out.println("from test");
+	}
+}
+
+interface H{
+	G m1();
+}
+public class M4 {
+
+}

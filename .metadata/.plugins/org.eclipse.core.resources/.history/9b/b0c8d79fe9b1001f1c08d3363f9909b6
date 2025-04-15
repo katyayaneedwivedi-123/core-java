@@ -1,0 +1,18 @@
+package app84;
+
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+class p implements Serializable{
+	int i;
+	int j;
+	int k;
+	
+	private void writeObject(ObjectOutputStream out) throws IOException{
+		System.out.println("I am in writeObject");
+		out.defaultWriteObject();
+	}
+}
+public class M10 {
+
+}

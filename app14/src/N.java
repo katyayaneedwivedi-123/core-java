@@ -1,0 +1,34 @@
+class N
+{
+	public static void main(String[] args) 
+	{
+		System.out.println(1);//1
+		if(true)
+		{
+			System.out.println(2);//2
+			if(true)
+			{
+				System.out.println(3);//3
+				if(false)
+				{	
+					System.out.println(4);
+				}
+				else
+				{
+					System.out.println(5);//5
+				}
+				System.out.println(6);//6
+			}
+			else
+			{
+				System.out.println(7);
+			}
+			System.out.println(8);//8
+		}
+		else
+		{
+			System.out.println(9);
+		}
+		System.out.println(10);//10
+	}
+}

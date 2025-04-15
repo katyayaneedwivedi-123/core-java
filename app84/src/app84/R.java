@@ -1,0 +1,10 @@
+package app84;
+
+import java.io.Serializable;
+
+public class R implements Serializable{
+	int i;
+	int j;
+	
+}
+//it is implementing serializable with one attribute

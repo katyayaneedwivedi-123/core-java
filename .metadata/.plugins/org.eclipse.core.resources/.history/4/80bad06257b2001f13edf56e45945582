@@ -1,0 +1,65 @@
+package app84;
+
+import java.io.Externalizable;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutput;
+import java.io.ObjectOutputStream;
+
+class Q implements Externalizable{
+	int i;
+	int j;
+	int k;
+	int m;
+	@Override
+	public void writeExternal(ObjectOutput out) throws IOException {
+		out.writeInt(j);
+		out.writeInt(m);
+		out.writeInt(40000);
+	}
+	@Override
+	public void readExternal(ObjectInput in) throws IOException {
+		j = in.readInt();
+		m = in.readInt();
+		System.out.println(in.readInt());
+	}
+}
+public class M11 {
+	public static void main(String[] args) throws Exception{
+		Q q1 = new Q();
+		q1.i = 10;
+		q1.j = 20;
+		q1.k = 30;
+		q1.m = 40;
+		
+		FileOutputStream fout = new FileOutputStream("test20.ser");
+		ObjectOutputStream out = new ObjectOutputStream(fout);
+		q1.writeExternal(out);
+		out.flush();
+		out.close();
+		
+		FileInputStream fin = new FileInputStream("test20.ser");
+		ObjectInputStream in = new ObjectInputStream(fin);
+		Q q2 = new Q();
+		System.out.println(q2.i);
+		System.out.println(q2.j);
+		System.out.println(q2.k);
+		System.out.println(q2.m);
+		System.out.println("--------------");
+		q2.readExternal(in);
+		System.out.println(q2.i);
+		System.out.println(q2.j);
+		System.out.println(q2.k);
+		System.out.println(q2.m);
+	}
+}
+//Externalizable is a interface it also extending to serializable 
+//it have to method
+//1. write external
+//2. read external
+//we have 4 attribute we want to write only 2 attribute so we in write method we we write only two attribute
+//if want additional some then we also add in the write method
+//whatever we write in the write method we also same read in the read method in same order

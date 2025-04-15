@@ -1,0 +1,19 @@
+package app81;
+
+import java.io.File;
+import java.io.IOException;
+
+public class M5 {
+	public static void main(String[] args) {
+		File f1 = new File("wwww.abc");
+		System.out.println(f1.exists());
+		try {
+			System.out.println(f1.createNewFile());
+		}
+		catch(IOException ex) {
+			ex.printStackTrace();
+		}
+		System.out.println(f1.exists());
+	}
+}
+//no matter exception is valid or not but it create the new file
